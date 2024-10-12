@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+    <title>高德在线地图</title>
+    <link rel="stylesheet" href="amap/base.css" />
+    <style>
+      html,
+      body,
+      #container {
+        height: 100%;
+        width: 100%;
+      }
+
+      .amap-icon img,
+      .amap-marker-content img {
+        width: 25px;
+        height: 34px;
+      }
+
+      .cus_info_window {
+        background-color: #fff;
+        padding: 10px;
+      }
+    </style>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=662c0af2955dd75987a18aa611dd47bd"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/javascript">
+      // 创建地图实例
+      var map = new AMap.Map('container', {
+        zoom: 13,
+        center: [116.39, 39.92],
+        resizeEnable: true,
+        resizeEnable: true,
+        rotateEnable: true,
+        pitchEnable: true,
+        defaultCursor: 'pointer',
+        showLabel: true, //是否显示文字标注
+
+      })
+    </script>
+  </body>
+</html>
