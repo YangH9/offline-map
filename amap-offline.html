@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
     <title>高德离线地图</title>
-    <link rel="stylesheet" href="amap/base.css" />
+    <link rel="stylesheet" href="./amap/base.css" />
     <style>
       html,
       body,
@@ -25,23 +25,24 @@
         padding: 10px;
       }
     </style>
-    <script type="text/javascript" src="amap/AMap3.js"></script>
+    <script type="text/javascript" src="./amap/AMap.js"></script>
   </head>
   <body>
     <div id="container"></div>
     <script type="text/javascript">
+      // 自定义瓦片图路径
+      // 瓦片图命名风格：/{z}/{x}/{y}/tile.png
       const layers = [
         new AMap.TileLayer({
-          getTileUrl: function (x, y, z) {
-            return `amap/MAP_zxy/${z}/${x}/${y}.png`
-          },
+          getTileUrl: (x, y, z) => `amap/MAP_zxy/${z}/${x}/${y}/tile.png`,
           opacity: 1,
           zIndex: 99
         })
       ]
       // 创建地图实例
       var map = new AMap.Map('container', {
-        zoom: 13,
+        zoom: 4.8,
+        zooms: [3, 18],
         center: [116.39, 39.92],
         resizeEnable: true,
         resizeEnable: true,

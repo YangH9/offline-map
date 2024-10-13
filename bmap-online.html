@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+    <title>百度在线地图</title>
+    <style>
+      html,
+      body,
+      #container {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=3.0&ak=f8MyDTibr499qlS8mOFfXWcdpCRJq7bR"></script>
+    </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/javascript">
+      var map = new BMap.Map("container");
+      map.centerAndZoom(new BMap.Point(116.3964,39.9093), 13);
+      map.enableScrollWheelZoom();
+    </script>
+  </body>
+</html>
