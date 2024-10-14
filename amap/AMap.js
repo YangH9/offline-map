@@ -37730,7 +37730,7 @@
               this.Ve = null,
               this.Dpt = !1,
               t && t.options.showOversea && (this.Dpt = t.options.showOversea),
-              this.fn(this._tileUrl),
+            //   this.fn(this._tileUrl),
               this.vn = new st.StyleParser("fast" === t.bZ.MZ.drawMode)
           }
           Yn = st.vG,
@@ -40991,13 +40991,13 @@
               this.Tv = k.create("div", this.kv, "amap-controls"),
               this.Iv.tabIndex = 0,
               {});
-              i.p_ = k.create("a", t, "amap-logo"),
-              // k.create("img", i.p_).src = st.Support.Ue ? AMap.getConfig().protocol + "://" + AMap.getConfig().domain + "/theme/v2.0/logo@2x.png" : AMap.getConfig().protocol + "://" + AMap.getConfig().domain + "/theme/v2.0/logo@1x.png",
-              // i.v_ = k.create("div", t, "amap-copyright"),
-              // i.v_.style.display = "none",
-              // 350 < k.getViewport(this.kv)[0] && (i.v_.innerHTML = AMap.getConfig().v_,
-              // i.v_.mapNumber = k.create("span", i.v_, "amap-mcode")),
-              this.m_ = i
+            //   i.p_ = k.create("a", t, "amap-logo"),
+            //   k.create("img", i.p_).src = st.Support.Ue ? AMap.getConfig().protocol + "://" + AMap.getConfig().domain + "/theme/v2.0/logo@2x.png" : AMap.getConfig().protocol + "://" + AMap.getConfig().domain + "/theme/v2.0/logo@1x.png",
+            //   i.v_ = k.create("div", t, "amap-copyright"),
+            //   i.v_.style.display = "none",
+            //   350 < k.getViewport(this.kv)[0] && (i.v_.innerHTML = AMap.getConfig().v_,
+            //   i.v_.mapNumber = k.create("span", i.v_, "amap-mcode")),
+            //   this.m_ = i
           }
           ,
           x.prototype.d_ = function() {
