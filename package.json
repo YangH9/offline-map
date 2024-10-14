@@ -1,0 +1,8 @@
+{
+  "name": "offline-map",
+  "scripts": {
+    "pull": "git pull",
+    "commit": "git add . & git commit -m [update]自动提交",
+    "push": "git push"
+  }
+}
