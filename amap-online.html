@@ -15,7 +15,7 @@
         padding: 0;
       }
     </style>
-    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=662c0af2955dd75987a18aa611dd47bd"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=662c0af2955dd75987a18aa611dd47bd&plugin=AMap.Scale"></script>
   </head>
   <body>
     <div id="container"></div>
@@ -31,6 +31,9 @@
         defaultCursor: 'pointer',
         showLabel: true //是否显示文字标注
       })
+      // 添加比例尺控件
+      const scale = new AMap.Scale()
+      map.addControl(scale)
     </script>
   </body>
 </html>

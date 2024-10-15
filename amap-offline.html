@@ -15,33 +15,42 @@
         padding: 0;
       }
     </style>
+    <script>
+      window.AMapConfig = {
+        logoUrl: './amap/logo.png'
+      }
+    </script>
     <script type="text/javascript" src="./amap/AMap.js"></script>
+    <script type="text/javascript" src="./amap/plugin.js"></script>
   </head>
   <body>
     <div id="container"></div>
-    <script type="text/javascript">
-      // 自定义瓦片图路径
-      // 瓦片图命名风格：/{z}/{x}/{y}/tile.png
-      const layers = [
-        new AMap.TileLayer({
-          getTileUrl: (x, y, z) => `./amap/MAP_zxy/${z}/${x}/${y}/tile.png`,
-          opacity: 1,
-          zIndex: 99
-        })
-      ]
-      // 创建地图实例
-      var map = new AMap.Map('container', {
-        zoom: 4.8,
-        zooms: [4, 15],
-        center: [116.39, 39.92],
-        resizeEnable: true,
-        resizeEnable: true,
-        rotateEnable: true,
-        pitchEnable: true,
-        defaultCursor: 'pointer',
-        showLabel: true, //是否显示文字标注
-        layers: layers
-      })
-    </script>
   </body>
+  <script type="text/javascript">
+    // 自定义瓦片图路径
+    // 瓦片图命名风格：/{z}/{x}/{y}/tile.png
+    const layers = [
+      new AMap.TileLayer({
+        getTileUrl: (x, y, z) => `./amap/MAP_zxy/${z}/${x}/${y}/tile.png`,
+        opacity: 1,
+        zIndex: 99
+      })
+    ]
+    // 创建地图实例
+    var map = new AMap.Map('container', {
+      zoom: 4.8,
+      zooms: [4, 15],
+      center: [116.39, 39.92],
+      resizeEnable: true,
+      resizeEnable: true,
+      rotateEnable: true,
+      pitchEnable: true,
+      defaultCursor: 'pointer',
+      showLabel: true, //是否显示文字标注
+      layers: layers
+    })
+    // 添加比例尺控件
+    const scale = new AMap.Scale()
+    map.addControl(scale)
+  </script>
 </html>
