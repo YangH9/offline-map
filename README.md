@@ -3,6 +3,8 @@
 离线地图
 
 [高德离线地图](amap-offline.html)
+[百度离线地图](bmap-offline.html)
+[腾讯离线地图](tmap-offline.html)
 
 
 [高德在线地图](amap-online.html)
